@@ -1,0 +1,31 @@
+{
+  "name": "dog-ear",
+  "version": "0.1.0",
+  "description": "Desktop sticky notes with animal outlines.",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.dogear.sticky",
+    "productName": "dog_ear",
+    "files": [
+      "index.html",
+      "styles.css",
+      "app.js",
+      "main.cjs",
+      "preload.cjs"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
