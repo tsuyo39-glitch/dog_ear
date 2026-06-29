@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dog_ear Note</title>
+    <link rel="stylesheet" href="note-styles.css" />
+  </head>
+  <body>
+    <div class="note-window">
+      <div class="note-titlebar" data-drag-handle>
+        <div class="note-title-text">メモ</div>
+        <div class="note-buttons">
+          <button class="window-btn minimize-btn" type="button" aria-label="最小化" title="最小化">−</button>
+          <button class="window-btn maximize-btn" type="button" aria-label="最大化" title="最大化">□</button>
+          <button class="window-btn close-btn" type="button" aria-label="閉じる" title="閉じる">×</button>
+        </div>
+      </div>
+
+      <div class="note-content">
+        <div class="rich-toolbar">
+          <select id="fontSizeSelect" class="toolbar-select" aria-label="フォントサイズ">
+            <option value="12">12pt</option>
+            <option value="14" selected>14pt</option>
+            <option value="16">16pt</option>
+            <option value="18">18pt</option>
+            <option value="20">20pt</option>
+          </select>
+          <button class="toolbar-btn" id="boldBtn" type="button" aria-label="太字"><strong>B</strong></button>
+          <button class="toolbar-btn" id="italicBtn" type="button" aria-label="斜体"><em>I</em></button>
+        </div>
+
+        <select class="shape-select" id="shapeSelect" aria-label="動物の形">
+          <option value="dog">犬</option>
+          <option value="cat">猫</option>
+          <option value="bear">くま</option>
+          <option value="rabbit">うさぎ</option>
+          <option value="frog">かえる</option>
+          <option value="chick">ひよこ</option>
+          <option value="panda">パンダ</option>
+          <option value="hedgehog">ハリネズミ</option>
+          <option value="koala">コアラ</option>
+          <option value="penguin">ペンギン</option>
+        </select>
+
+        <div class="palette" id="palette" aria-label="付箋カラー"></div>
+
+        <textarea class="note-editor" id="noteText" aria-label="メモ本文" placeholder="メモを入力..."></textarea>
+
+        <div class="note-images" id="imageGallery"></div>
+      </div>
+    </div>
+
+    <script src="note.js"></script>
+  </body>
+</html>
